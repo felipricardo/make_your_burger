@@ -1,9 +1,9 @@
 <template>
     <div id="nav">
         <router-link to="/">
-            <img :src="logo" :alt="alt" id="logo">
+            <img :src="logo" :alt="alt" id="logo-url">
         </router-link>
-        <router-link to="/">Home</router-link> |
+        <router-link to="/">Home</router-link>
         <router-link to="/pedidos">Pedidos</router-link>
   </div>
 </template>
@@ -21,5 +21,26 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    #nav #logo-url {
+        margin: auto;
+        margin-left: 0;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #nav a {
+        color: #FCBA03;
+        text-decoration: none;
+        margin: 12px;
+        transition: .5s;
+    }
+
+    #nav a:hover {
+        color: #FFF;
     }
 </style>
